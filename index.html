@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru" x-data="{ 
+    isAuth: false,
+    showLoginModal: false,
+    showRegisterModal: false,
+    showPurchaseForm: false,
+    activeTab: 'home'
+}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSoft - Продажа софта</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        [x-cloak] { display: none !important; }
+        .phone-frame {
+            background: #f8f9fa;
+            border: 12px solid #111;
+            border-radius: 40px;
+            width: 320px;
+            height: 600px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            margin: 0 auto 50px;
+        }
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 20px;
+            background: #111;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .chat-container {
+            height: 500px;
+            overflow-y: auto;
+            padding-bottom: 20px;
+        }
+        .message {
+            max-width: 70%;
+            padding: 10px 15px;
+            margin: 5px 15px;
+            border-radius: 18px;
+            position: relative;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeIn 0.3s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans" x-cloak>
+    <!-- Шапка -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-blue-600">TechSoft</h1>
+            <nav>
+                <template x-if="!isAuth">
+                    <div class="space-x-4">
+                        <button @click="showLoginModal = true" class="px-4 py-2 text-gray-700 hover:text-blue-600">Войти</button>
+                        <button @click="showRegisterModal = true" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Регистрация</button>
+                                        <button 
+                    @click="activeTab = 'purchase'" 
+                    class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                >
+                    Купить сейчас
+                </button>
+                    </div>
+                </template>
+                <template x-if="isAuth">
+                    <div class="flex items-center space-x-4">
+                        <button @click="activeTab = 'account'" class="px-4 py-2 text-gray-700 hover:text-blue-600">Личный кабинет</button>
+                        <button @click="isAuth = false" class="px-4 py-2 text-gray-700 hover:text-red-600">Выйти</button>
+                    </div>
+                </template>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Домашняя страница -->
+        <div x-show="activeTab === 'home'">
+            <section class="mb-12 text-center">
+                <h2 class="text-3xl font-bold mb-4">Мощный софт для вашего бизнеса</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-8">Улучшите свою продуктивность с нашими решениями</p>
+
+
+
+       <div class="container mx-auto px-4">
+        <!-- Чат в смартфоне -->
+        <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="px-4 pt-6">
+                <div class="text-center font-bold text-lg mb-4">Поддержка</div>
+                <div class="chat-container" x-ref="chatContainer">
+                    <template x-for="(message, index) in chatMessages" :key="index">
+                        <div 
+                            class="message" 
+                            :class="{
+                                'bg-blue-500 text-white ml-auto': message.sender === 'user',
+                                'bg-gray-200 text-gray-800 mr-auto': message.sender === 'support'
+                            }"
+                            :style="`animation-delay: ${message.delay}s`"
+                            x-text="message.text"
+                        ></div>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+                <div class="flex justify-center mt-8">
+  <a 
+    href="file:///D:/MySite/nan.html" 
+    class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+  >
+    Перейти на страницу 1
+  </a>
+</div>
+
+                <div class="flex justify-center mt-8">
+  <a 
+    href="file:///D:/MySite/aga.html" 
+    class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+  >
+    Перейти на страницу 2
+  </a>
+</div>
+
+                <div class="flex justify-center mt-8">
+  <a 
+    href="file:///D:/MySite/len.html" 
+    class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+  >
+    Перейти на страницу 3
+  </a>
+</div>
+
+                <div class="flex justify-center mt-8">
+  <a 
+    href="file:///D:/MySite/sas.html" 
+    class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+  >
+    Перейти на страницу 4
+  </a>
+</div>
+
+        <!-- Блоки о продукте -->
+        <div class="max-w-6xl mx-auto">
+            <!-- Заголовок -->
+            <h2 class="text-3xl font-bold text-center mb-12">Почему выбирают наш продукт</h2>
+
+            <!-- Фичи продукта -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Фича 1 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-blue-500 text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold mb-3">Молниеносная скорость</h3>
+                    <p class="text-gray-600">Оптимизированный код работает в 2 раза быстрее аналогов благодаря нашему уникальному движку.</p>
+                </div>
+
+                <!-- Фича 2 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-blue-500 text-4xl mb-4">🔒</div>
+                    <h3 class="text-xl font-bold mb-3">Полная безопасность</h3>
+                    <p class="text-gray-600">Шифрование данных на лету и защита от всех известных типов кибератак.</p>
+                </div>
+
+                <!-- Фича 3 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-blue-500 text-4xl mb-4">🔄</div>
+                    <h3 class="text-xl font-bold mb-3">Автообновления</h3>
+                    <p class="text-gray-600">Все новые функции становятся доступны автоматически без переустановки.</p>
+                </div>
+            </div>
+
+            <!-- Демо-видео -->
+<div class="bg-white rounded-xl shadow-md overflow-hidden mb-16">
+    <div class="md:flex">
+        <div class="md:w-1/2 p-8 md:p-12">
+            <h3 class="text-2xl font-bold mb-4">Посмотрите как это работает</h3>
+            <p class="text-gray-600 mb-6">3-минутное демо покажет все ключевые возможности продукта в реальных условиях.</p>
+            <a href="https://rutube.ru/video/9e21123d23a891b5669a72d9425d9618/" target="_blank" class="inline-block px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+                Смотреть полное видео
+            </a>
+        </div>
+        <div class="md:w-1/2 bg-gray-900 flex items-center justify-center p-2">
+            <!-- YouTube iframe -->
+            <div class="aspect-w-16 aspect-h-9 w-full">
+                <iframe 
+                    src="https://rutube.ru/video/9e21123d23a891b5669a72d9425d9618/" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    class="w-full h-full rounded-lg"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- Отзывы -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-center mb-8">Что говорят наши клиенты</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 font-bold mr-4">АК</div>
+                            <div>
+                                <h4 class="font-bold">Алексей К.</h4>
+                                <div class="flex text-yellow-400">
+                                    ★ ★ ★ ★ ★
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Используем в компании на 50+ компьютерах. Сэкономили сотни рабочих часов за месяц!"</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 font-bold mr-4">МС</div>
+                            <div>
+                                <h4 class="font-bold">Марина С.</h4>
+                                <div class="flex text-yellow-400">
+                                    ★ ★ ★ ★ ☆
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Интуитивно понятный интерфейс. Поддержка действительно отвечает за 5 минут, как и обещали."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener('alpine:init', () => {
+    Alpine.data('chatApp', () => ({
+        messages: [],
+        chatSequence: [
+            { text: 'Здравствуйте! Чем могу помочь?', sender: 'support', delay: 0.5 },
+            { text: 'Привет! У меня проблема с приложением...', sender: 'user', delay: 1.5 },
+            { text: 'Опишите подробнее вашу проблему', sender: 'support', delay: 2.5 },
+            { text: 'Оно просто не открывается после обновления', sender: 'user', delay: 3.5 },
+            { text: 'Попробуйте переустановить приложение', sender: 'support', delay: 4.5 },
+            { text: 'Уже пробовал, не помогло', sender: 'user', delay: 5.5 },
+            { text: 'Тогда сбросьте настройки через меню "О программе"', sender: 'support', delay: 6.5 },
+            { text: 'Спасибо, попробую!', sender: 'user', delay: 7.5 },
+            { text: 'Обращайтесь, если будут ещё вопросы!', sender: 'support', delay: 8.5 }
+        ],
+        
+        initChat() {
+            this.chatSequence.forEach((msg) => {
+                setTimeout(() => {
+                    this.messages.push(msg);
+                    this.$nextTick(() => {
+                        this.$refs.chatContainer.scrollTop = this.$refs.chatContainer.scrollHeight;
+                    });
+                }, msg.delay * 1000);
+            });
+        }
+    }));
+});
+</script>
+        </div>
+
+        <!-- Форма покупки -->
+        <div x-show="activeTab === 'purchase'" x-transition>
+            <section class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow">
+                <h2 class="text-2xl font-bold mb-6">Оформление заказа</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Выберите продукт</label>
+                        <select class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-blue-500">
+                            <option>Базовый пакет ($99)</option>
+                            <option>Профессиональный пакет ($199)</option>
+                            <option>Премиум пакет ($299)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <button type="button" class="w-full py-3 bg-blue-600 text-white rounded hover:bg-blue-700">
+                        Оплатить
+                    </button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Личный кабинет -->
+        <div x-show="activeTab === 'account'" x-transition>
+            <section class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow">
+                <h2 class="text-2xl font-bold mb-6">Личный кабинет</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-semibold">Ваши данные</h3>
+                        <p class="text-gray-600">example@email.com</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Ваши лицензии</h3>
+                        <ul class="mt-2 space-y-2">
+                            <li class="p-3 bg-gray-50 rounded">Профессиональный пакет (до 2025-12-31)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Модальное окно входа -->
+    <div x-show="showLoginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+        <div @click.away="showLoginModal = false" class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+            <h3 class="text-xl font-bold mb-4">Вход в аккаунт</h3>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" class="w-full px-4 py-2 border rounded">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Пароль</label>
+                    <input type="password" class="w-full px-4 py-2 border rounded">
+                </div>
+                <button 
+                    @click.prevent="isAuth = true; showLoginModal = false" 
+                    class="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                >
+                    Войти
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно регистрации -->
+    <div x-show="showRegisterModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+        <div @click.away="showRegisterModal = false" class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+            <h3 class="text-xl font-bold mb-4">Регистрация</h3>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" class="w-full px-4 py-2 border rounded">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Пароль</label>
+                    <input type="password" class="w-full px-4 py-2 border rounded">
+                </div>
+                <button 
+                    @click.prevent="isAuth = true; showRegisterModal = false" 
+                    class="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                >
+                    Зарегистрироваться
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+<footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- Основные колонки -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <!-- Колонка 1 -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Продукт</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Возможности</a></li>
+                        <li><a href="#" class="hover:text-white transition">Тарифы</a></li>
+                        <li><a href="#" class="hover:text-white transition">Обновления</a></li>
+                        <li><a href="#" class="hover:text-white transition">Демо</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Колонка 2 -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Компания</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">О нас</a></li>
+                        <li><a href="#" class="hover:text-white transition">Блог</a></li>
+                        <li><a href="#" class="hover:text-white transition">Карьера</a></li>
+                        <li><a href="#" class="hover:text-white transition">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Колонка 3 -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Поддержка</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Документация</a></li>
+                        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition">Сообщество</a></li>
+                        <li><a href="#" class="hover:text-white transition">Форум</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Колонка 4 -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Подписаться</h4>
+                    <p class="mb-4">Получайте новости и обновления</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Ваш email" class="px-4 py-2 w-full rounded-l focus:outline-none text-gray-900">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r transition">
+                            →
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Разделитель -->
+            <div class="border-t border-gray-800 my-8"></div>
+            
+            <!-- Нижняя часть -->
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Лого + копирайт -->
+                <div class="flex items-center mb-4 md:mb-0">
+                    <span class="text-xl font-bold text-white mr-2">TechSoft</span>
+                    <span class="text-sm">© 2023 Все права защищены</span>
+                </div>
+                
+                <!-- Соцсети -->
+                <div class="flex space-x-4">
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition">
+                        <span class="sr-only">Twitter</span>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition">
+                        <span class="sr-only">Facebook</span>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
