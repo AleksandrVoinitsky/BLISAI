@@ -500,17 +500,32 @@ this.filteredProducts = this.products.filter(product => {
                 },
                 
                 processPayment() {
-                    const paymentData = {
-                        method: this.paymentMethod,
-                        amount: this.totalAmount,
-                        items: this.cart.map(item => ({
-                            id: item.id,
-                            quantity: item.quantity,
-                            product: this.getProductById(item.id)
-                        })),
-                        comment: this.orderComment,
-                        timestamp: new Date().toISOString()
-                    };
+    const paymentData = {
+        method: this.paymentMethod,
+        amount: this.totalAmount,
+        items: this.cart.map(item => ({
+            id: item.id,
+            quantity: item.quantity,
+            name: this.getProductById(item.id).name,
+            price: this.getProductById(item.id).price
+        })),
+        comment: this.orderComment,
+        timestamp: new Date().toISOString()
+    };
+    
+    // Отправка данных в бота через Telegram WebApp
+    if (window.Telegram && Telegram.WebApp) {
+        Telegram.WebApp.sendData(JSON.stringify(paymentData));
+        Telegram.WebApp.close();
+    } else {
+        console.log('Данные заказа:', paymentData);
+        alert('Заказ оформлен! Данные отправлены в бот.');
+        this.cart = [];
+        this.saveCart();
+        this.activeTab = 'shop';
+        this.orderComment = '';
+    }
+}
                     
                     console.log('Payment data:', paymentData);
                     
