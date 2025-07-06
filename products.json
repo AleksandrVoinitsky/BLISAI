@@ -4,14 +4,14 @@
         "name": "Смартфон Ахах",
         "description": "Флагманский смартфон с лучшей камерой",
         "price": 79990,
-        "image": "Coin.png"
+        "image": "9.png"
     },
     {
         "id": 2,
         "name": "Ноутбук Pro",
         "description": "Мощный ноутбук для работы и игр",
         "price": 129990,
-        "image": "Energy.png"
+        "image": "10.png"
     },
     {
         "id": 3,
