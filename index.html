@@ -208,7 +208,12 @@
                         <template x-for="product in visibleProducts" :key="product.id">
                             <div class="bg-telegram-block rounded-lg overflow-hidden shadow product-card border border-telegram-border">
                                 <img :src="product.image ? 'images/' + product.image : 'images/noimage.webp'" :alt="product.name" loading="lazy" class="w-full h-50 object-cover" onerror="this.src='images/noimage.webp'">
-                                <div class="flex items-center justify-between">
+                                <div class="p-3">
+                                    <h3 class="font-medium text-telegram-text" x-text="product.name"></h3>
+                                    <p class="text-telegram-secondary_text text-xs mb-1" x-text="product.description" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;"></p>
+                                    <p class="text-telegram-accent text-sm mb-2" x-text="'₽' + product.price"></p>
+                                    
+                                    <div class="flex items-center justify-between">
                                          <button 
                                              @click="decrementCart(product.id)"
                                            class="bg-telegram-button hover:bg-telegram-button_hover text-white rounded-full w-7 h-7 flex items-center justify-center transition-colors"
@@ -229,6 +234,7 @@
                                                 +
                                               </button>
                                         </div>
+                                </div>
                             </div>
                         </template>
                     </div>
@@ -248,7 +254,7 @@
                     
                     <div class="space-y-2">
                         <template x-for="item in cart" :key="item.id">
-                           <div class="flex items-center bg-telegram-block rounded-lg p-2 border border-telegram-border relative min-h-[80px]">
+                            <div class="flex items-center bg-telegram-block rounded-lg p-2 border border-telegram-border relative min-h-[80px]">
     <button 
         @click="removeFromCart(item.id)"
         class="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm transition-colors"
@@ -257,11 +263,8 @@
         ×
     </button>
     
-    <img :src="getProductById(item.id).image ? 'images/' + getProductById(item.id).image : 'images/noimage.webp'" 
-         :alt="getProductById(item.id).name" 
-         class="w-12 h-12 object-cover rounded">
-    
-    <div class="ml-3 flex-1 pr-4">
+    <img :src="getProductById(item.id).image ? 'images/' + getProductById(item.id).image : 'images/noimage.webp'" :alt="getProductById(item.id).name" class="w-12 h-12 object-cover rounded">
+    <div class="ml-3 flex-1">
         <h3 class="font-medium text-telegram-text" x-text="getProductById(item.id).name"></h3>
         <p class="text-telegram-accent text-sm" x-text="'₽' + (getProductById(item.id).price * item.quantity)"></p>
     </div>
@@ -276,7 +279,6 @@
         >
     </div>
 </div>
-                            </div>
                         </template>
                     </div>
                     
