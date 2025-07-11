@@ -110,21 +110,6 @@
             border-width: 0 2px 2px 0;
             transform: rotate(45deg);
         }
-        
-        /* Стили для скрывающегося поиска */
-        .search-container {
-            transition: all 0.3s ease;
-            transform: translateY(0);
-            opacity: 1;
-        }
-        .search-container.hidden {
-            transform: translateY(-100%);
-            opacity: 0;
-            height: 0;
-            padding: 0;
-            margin: 0;
-            border: none;
-        }
     </style>
 </head>
 <body class="h-full" x-data="app()" x-init="init()">
@@ -162,23 +147,23 @@
         <!-- Tab Content -->
         <div class="flex-1 overflow-y-auto" @scroll.debounce="handleScroll">
             <!-- Shop Tab -->
-            <div x-show="activeTab === 'shop'" x-transition:enter="fade-enter-active" x-transition:leave="fade-leave-active">
-                <!-- Поиск с анимацией скрытия -->
-                <div class="search-container p-3 bg-telegram-block border-b border-telegram-border sticky top-0 z-10" 
-                     :class="{'hidden': !searchVisible}">
-                    <div class="relative">
-                        <input 
-                            x-model="searchQuery" 
-                            @input="searchProducts()"
-                            type="text" 
-                            placeholder="Поиск товаров..." 
-                            class="w-full bg-telegram-input_bg border border-telegram-border rounded-lg py-2 px-4 pl-10 text-telegram-text focus:outline-none focus:ring-1 focus:ring-telegram-button"
-                        >
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-telegram-secondary_text absolute left-3 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </div>
-                </div>
+<!-- В теле приложения (возвращаем статический поиск) -->
+<div x-show="activeTab === 'shop'" x-transition:enter="fade-enter-active" x-transition:leave="fade-leave-active">
+    <!-- Поиск (статика без анимаций) -->
+    <div class="p-3 bg-telegram-block border-b border-telegram-border sticky top-0 z-10">
+        <div class="relative">
+            <input 
+                x-model="searchQuery" 
+                @input="searchProducts()"
+                type="text" 
+                placeholder="Поиск товаров..." 
+                class="w-full bg-telegram-input_bg border border-telegram-border rounded-lg py-2 px-4 pl-10 text-telegram-text focus:outline-none focus:ring-1 focus:ring-telegram-button"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-telegram-secondary_text absolute left-3 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </div>
+    </div>
                 
                 <div class="p-3">
                     <template x-if="loading">
@@ -459,26 +444,20 @@
                     this.visibleProducts = [...this.visibleProducts, ...newProducts];
                 },
                 
-                searchProducts() {
-                    if (!this.searchQuery) {
-                        this.filteredProducts = [...this.products];
-                        this.currentPage = 1;
-                        this.updateVisibleProducts();
-                        return;
-                    }
-                    
-                    const query = this.searchQuery.toLowerCase().trim();
-                    this.filteredProducts = this.products.filter(product => {
-                        return (
-                            product.name.toLowerCase().includes(query) ||
-                            product.description.toLowerCase().includes(query) ||
-                            product.name.toLowerCase().split(' ').some(word => word.startsWith(query)) ||
-                            product.name.toLowerCase().replace(/\s+/g, '').includes(query.replace(/\s+/g, ''))
-                            );
-                    });
-                    this.currentPage = 1;
-                    this.updateVisibleProducts();
-                },
+                 searchProducts() {
+            if (!this.searchQuery) {
+                this.filteredProducts = [...this.products];
+                return;
+            }
+            
+            const query = this.searchQuery.toLowerCase().trim();
+            this.filteredProducts = this.products.filter(product => {
+                return (
+                    product.name.toLowerCase().includes(query) ||
+                    product.description.toLowerCase().includes(query)
+                );
+            });
+        },
                 
                 handleScroll(e) {
                     const currentScrollPosition = e.target.scrollTop;
