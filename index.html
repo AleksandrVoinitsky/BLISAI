@@ -112,19 +112,23 @@
         }
 
         .bg-red-500 {
-        background-color: #ef4444;
+            background-color: #ef4444;
         }
-
         .hover\:bg-red-600:hover {
-         background-color: #dc2626;
+            background-color: #dc2626;
         }
-        
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
     </style>
 </head>
 <body class="h-full" x-data="app()" x-init="init()">
     <div class="flex flex-col h-full max-w-md mx-auto bg-telegram-bg">
-        <!-- Убрали шапку с Telegram Shop и кнопкой назад -->
-        
         <!-- Tabs -->
         <div class="flex border-b border-telegram-border bg-telegram-block">
             <button 
@@ -156,23 +160,21 @@
         <!-- Tab Content -->
         <div class="flex-1 overflow-y-auto" @scroll.debounce="handleScroll">
             <!-- Shop Tab -->
-<!-- В теле приложения (возвращаем статический поиск) -->
-<div x-show="activeTab === 'shop'" x-transition:enter="fade-enter-active" x-transition:leave="fade-leave-active">
-    <!-- Поиск (статика без анимаций) -->
-    <div class="p-3 bg-telegram-block border-b border-telegram-border sticky top-0 z-10">
-        <div class="relative">
-            <input 
-                x-model="searchQuery" 
-                @input="searchProducts()"
-                type="text" 
-                placeholder="Поиск товаров..." 
-                class="w-full bg-telegram-input_bg border border-telegram-border rounded-lg py-2 px-4 pl-10 text-telegram-text focus:outline-none focus:ring-1 focus:ring-telegram-button"
-            >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-telegram-secondary_text absolute left-3 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-        </div>
-    </div>
+            <div x-show="activeTab === 'shop'" x-transition:enter="fade-enter-active" x-transition:leave="fade-leave-active">
+                <div class="p-3 bg-telegram-block border-b border-telegram-border sticky top-0 z-10">
+                    <div class="relative">
+                        <input 
+                            x-model="searchQuery" 
+                            @input="searchProducts()"
+                            type="text" 
+                            placeholder="Поиск товаров..." 
+                            class="w-full bg-telegram-input_bg border border-telegram-border rounded-lg py-2 px-4 pl-10 text-telegram-text focus:outline-none focus:ring-1 focus:ring-telegram-button"
+                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-telegram-secondary_text absolute left-3 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                </div>
                 
                 <div class="p-3">
                     <template x-if="loading">
@@ -211,23 +213,27 @@
                                     <p class="text-telegram-secondary_text text-xs mb-1" x-text="product.description" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;"></p>
                                     <p class="text-telegram-accent text-sm mb-2" x-text="'₽' + product.price"></p>
                                     
-                                    <div class="flex items-center gap-2">
-                                    <button 
-                                       @click="removeFromCart(item.id)"
-                                        class="bg-red-500 hover:bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm transition-colors"
-                                        title="Удалить"
-                                    >
-                                        ×
-                                   </button>
-                                       <input 
-                                       type="number" 
-                                        x-model="item.quantity"
-                                        @change="updateCartQuantity(item.id, $event.target.value)"
-                                        min="1"
-                                       class="w-16 bg-telegram-input_bg border border-telegram-border rounded text-center text-telegram-text py-1"
-    >
+                                    <div class="flex items-center justify-between">
+                                         <button 
+                                             @click="decrementCart(product.id)"
+                                           class="bg-telegram-button hover:bg-telegram-button_hover text-white rounded-full w-7 h-7 flex items-center justify-center transition-colors"
+                                            >
+                                              -
+                                            </button>
+                                             <input 
+                                             type="number" 
+                                              x-model="getProductCount(product.id)"
+                                               @change="updateCartQuantity(product.id, $event.target.value)"
+                                               min="0"
+                                               class="w-12 mx-2 bg-telegram-input_bg border border-telegram-border rounded text-center text-telegram-text py-1"
+                                                 >
+                                                <button 
+                                               @click="incrementCart(product.id)"
+                                                class="bg-telegram-button hover:bg-telegram-button_hover text-white rounded-full w-7 h-7 flex items-center justify-center transition-colors"
+                                             >
+                                                +
+                                              </button>
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                         </template>
@@ -254,26 +260,21 @@
                                     <h3 class="font-medium text-telegram-text" x-text="getProductById(item.id).name"></h3>
                                     <p class="text-telegram-accent text-sm" x-text="'₽' + (getProductById(item.id).price * item.quantity)"></p>
                                 </div>
-                                <div class="flex items-center">
+                                <div class="flex items-center gap-2">
                                     <button 
-                                        @click="decrementCart(item.id)"
-                                        class="bg-telegram-button hover:bg-telegram-button_hover text-white rounded-full w-6 h-6 flex items-center justify-center text-sm transition-colors"
+                                        @click="removeFromCart(item.id)"
+                                        class="bg-red-500 hover:bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm transition-colors"
+                                        title="Удалить"
                                     >
-                                        -
+                                        ×
                                     </button>
                                     <input 
                                         type="number" 
                                         x-model="item.quantity"
                                         @change="updateCartQuantity(item.id, $event.target.value)"
                                         min="1"
-                                        class="w-12 mx-2 bg-telegram-input_bg border border-telegram-border rounded text-center text-telegram-text"
+                                        class="w-16 bg-telegram-input_bg border border-telegram-border rounded text-center text-telegram-text py-1"
                                     >
-                                    <button 
-                                        @click="incrementCart(item.id)"
-                                        class="bg-telegram-button hover:bg-telegram-button_hover text-white rounded-full w-6 h-6 flex items-center justify-center text-sm transition-colors"
-                                    >
-                                        +
-                                    </button>
                                 </div>
                             </div>
                         </template>
@@ -449,14 +450,6 @@
                     tomorrow.setDate(tomorrow.getDate() + 1);
                     this.customDate = tomorrow.toISOString().split('T')[0];
                 },
-
-                removeFromCart(id) {
-                    const itemIndex = this.cart.findIndex(item => item.id === id);
-                    if (itemIndex !== -1) {
-                        this.cart.splice(itemIndex, 1);
-                        this.saveCart();
-                    }
-                },
                 
                 get hasMoreProducts() {
                     return this.visibleProducts.length < this.filteredProducts.length;
@@ -556,6 +549,14 @@
                     }
                 },
                 
+                removeFromCart(id) {
+                    const itemIndex = this.cart.findIndex(item => item.id === id);
+                    if (itemIndex !== -1) {
+                        this.cart.splice(itemIndex, 1);
+                        this.saveCart();
+                    }
+                },
+                
                 updateCartQuantity(id, quantity) {
                     quantity = parseInt(quantity);
                     if (isNaN(quantity)) return;
@@ -636,8 +637,6 @@
                     this.orderComment = '';
                     this.deliveryDate = 'today';
                 }
-
-                
             }
         }
     </script>
