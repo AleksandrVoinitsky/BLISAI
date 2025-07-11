@@ -254,10 +254,10 @@
                     
                     <div class="space-y-2">
                         <template x-for="item in cart" :key="item.id">
-                            <div class="flex items-center bg-telegram-block rounded-lg p-2 border border-telegram-border relative min-h-[120px]">
+                            <div class="flex items-center bg-telegram-block rounded-lg p-2 border border-telegram-border relative min-h-[80px]">
     <button 
         @click="removeFromCart(item.id)"
-        class="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm transition-colors"
+        class="absolute top-0 right-0 bg-red-500 hover:bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm transition-colors"
         title="Удалить"
     >
         ×
@@ -269,7 +269,7 @@
         <p class="text-telegram-accent text-sm" x-text="'₽' + (getProductById(item.id).price * item.quantity)"></p>
     </div>
     
-    <div class="absolute bottom-2 right-2">
+    <div class="absolute bottom-0 right-0">
         <input 
             type="number" 
             x-model="item.quantity"
