@@ -263,7 +263,8 @@
         ×
     </button>
     
-    <img :src="getProductById(item.id).image ? 'images/' + getProductById(item.id).image : 'images/noimage.webp'" :alt="getProductById(item.id).name" class="w-12 h-12 object-cover rounded">
+    <img :src="'images/' + (getProductById(item.id).image || 'noimage.webp')"
+     @error="$event.target.src='images/noimage.webp'" :alt="getProductById(item.id).name" class="w-12 h-12 object-cover rounded">
     <div class="ml-3 flex-1">
         <h3 class="font-medium text-telegram-text" x-text="getProductById(item.id).name"></h3>
         <p class="text-telegram-accent text-sm" x-text="'₽' + (getProductById(item.id).price * item.quantity)"></p>
