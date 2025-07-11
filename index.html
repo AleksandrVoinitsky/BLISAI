@@ -473,19 +473,23 @@
                 },
                 
                 searchProducts() {
-                    if (!this.searchQuery) {
-                        this.filteredProducts = [...this.products];
-                        return;
-                    }
-                    
-                    const query = this.searchQuery.toLowerCase().trim();
-                    this.filteredProducts = this.products.filter(product => {
-                        return (
-                            product.name.toLowerCase().includes(query) ||
-                            product.description.toLowerCase().includes(query)
-                        );
-                    });
-                },
+    if (!this.searchQuery) {
+        this.filteredProducts = [...this.products];
+        this.currentPage = 1; // Сбрасываем на первую страницу
+        this.updateVisibleProducts();
+        return;
+    }
+    
+    const query = this.searchQuery.toLowerCase().trim();
+    this.filteredProducts = this.products.filter(product => {
+        return (
+            product.name.toLowerCase().includes(query) ||
+            product.description.toLowerCase().includes(query)
+        );
+    });
+    this.currentPage = 1; // Сбрасываем на первую страницу
+    this.updateVisibleProducts(); // Обновляем видимые товары
+},
                 
                 handleScroll(e) {
                     const currentScrollPosition = e.target.scrollTop;
