@@ -208,33 +208,35 @@
                         <template x-for="product in visibleProducts" :key="product.id">
                             <div class="bg-telegram-block rounded-lg overflow-hidden shadow product-card border border-telegram-border">
                                 <img :src="product.image ? 'images/' + product.image : 'images/noimage.webp'" :alt="product.name" loading="lazy" class="w-full h-50 object-cover" onerror="this.src='images/noimage.webp'">
-                                <div class="p-3">
-                                    <h3 class="font-medium text-telegram-text" x-text="product.name"></h3>
-                                    <p class="text-telegram-secondary_text text-xs mb-1" x-text="product.description" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;"></p>
-                                    <p class="text-telegram-accent text-sm mb-2" x-text="'₽' + product.price"></p>
-                                    
-                                    <div class="flex items-center justify-between">
-                                         <button 
-                                             @click="decrementCart(product.id)"
-                                           class="bg-telegram-button hover:bg-telegram-button_hover text-white rounded-full w-7 h-7 flex items-center justify-center transition-colors"
-                                            >
-                                              -
-                                            </button>
-                                             <input 
-                                             type="number" 
-                                              x-model="getProductCount(product.id)"
-                                               @change="updateCartQuantity(product.id, $event.target.value)"
-                                               min="0"
-                                               class="w-12 mx-2 bg-telegram-input_bg border border-telegram-border rounded text-center text-telegram-text py-1"
-                                                 >
-                                                <button 
-                                               @click="incrementCart(product.id)"
-                                                class="bg-telegram-button hover:bg-telegram-button_hover text-white rounded-full w-7 h-7 flex items-center justify-center transition-colors"
-                                             >
-                                                +
-                                              </button>
-                                        </div>
-                                </div>
+                                <div class="p-3 flex flex-col h-full">
+    <div class="flex-grow">
+        <h3 class="font-medium text-telegram-text" x-text="product.name"></h3>
+        <p class="text-telegram-secondary_text text-xs mb-1" x-text="product.description" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;"></p>
+        <p class="text-telegram-accent text-sm mb-2" x-text="'₽' + product.price"></p>
+    </div>
+    
+    <div class="flex items-center justify-between mt-auto">
+        <button 
+            @click="decrementCart(product.id)"
+            class="bg-telegram-button hover:bg-telegram-button_hover text-white rounded-full w-7 h-7 flex items-center justify-center transition-colors"
+        >
+            -
+        </button>
+        <input 
+            type="number" 
+            x-model="getProductCount(product.id)"
+            @change="updateCartQuantity(product.id, $event.target.value)"
+            min="0"
+            class="w-12 mx-2 bg-telegram-input_bg border border-telegram-border rounded text-center text-telegram-text py-1"
+        >
+        <button 
+            @click="incrementCart(product.id)"
+            class="bg-telegram-button hover:bg-telegram-button_hover text-white rounded-full w-7 h-7 flex items-center justify-center transition-colors"
+        >
+            +
+        </button>
+    </div>
+</div>
                             </div>
                         </template>
                     </div>
@@ -254,28 +256,34 @@
                     
                     <div class="space-y-2">
                         <template x-for="item in cart" :key="item.id">
-                            <div class="flex items-center bg-telegram-block rounded-lg p-2 border border-telegram-border">
-                                <img :src="getProductById(item.id).image ? 'images/' + getProductById(item.id).image : 'images/noimage.webp'" :alt="getProductById(item.id).name" class="w-12 h-12 object-cover rounded" onerror="this.src='images/noimage.webp'">
-                                <div class="ml-3 flex-1">
-                                    <h3 class="font-medium text-telegram-text" x-text="getProductById(item.id).name"></h3>
-                                    <p class="text-telegram-accent text-sm" x-text="'₽' + (getProductById(item.id).price * item.quantity)"></p>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <button 
-                                        @click="removeFromCart(item.id)"
-                                        class="bg-red-500 hover:bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm transition-colors"
-                                        title="Удалить"
-                                    >
-                                        ×
-                                    </button>
-                                    <input 
-                                        type="number" 
-                                        x-model="item.quantity"
-                                        @change="updateCartQuantity(item.id, $event.target.value)"
-                                        min="1"
-                                        class="w-16 bg-telegram-input_bg border border-telegram-border rounded text-center text-telegram-text py-1"
-                                    >
-                                </div>
+                           <div class="flex items-center bg-telegram-block rounded-lg p-2 border border-telegram-border relative min-h-[80px]">
+    <button 
+        @click="removeFromCart(item.id)"
+        class="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm transition-colors"
+        title="Удалить"
+    >
+        ×
+    </button>
+    
+    <img :src="getProductById(item.id).image ? 'images/' + getProductById(item.id).image : 'images/noimage.webp'" 
+         :alt="getProductById(item.id).name" 
+         class="w-12 h-12 object-cover rounded">
+    
+    <div class="ml-3 flex-1 pr-4">
+        <h3 class="font-medium text-telegram-text" x-text="getProductById(item.id).name"></h3>
+        <p class="text-telegram-accent text-sm" x-text="'₽' + (getProductById(item.id).price * item.quantity)"></p>
+    </div>
+    
+    <div class="absolute bottom-2 right-2">
+        <input 
+            type="number" 
+            x-model="item.quantity"
+            @change="updateCartQuantity(item.id, $event.target.value)"
+            min="1"
+            class="w-16 bg-telegram-input_bg border border-telegram-border rounded text-center text-telegram-text py-1"
+        >
+    </div>
+</div>
                             </div>
                         </template>
                     </div>
