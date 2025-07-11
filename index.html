@@ -2,7 +2,7 @@
 <html lang="ru" class="h-full">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Telegram Mini App Shop</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -34,7 +34,7 @@
         body {
             background-color: #0e1621;
             color: #e1e9f2;
-            overflow: hidden; /* Отключаем скролл для всего документа */
+            touch-action: pan-y; /* Разрешаем только вертикальный скролл */
         }
         .tab-active {
             border-bottom: 2px solid #3e6ab1;
@@ -54,9 +54,16 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
-        /* Убираем стандартный скроллбар */
+        /* Стиль для скроллбара */
         ::-webkit-scrollbar {
-            display: none;
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e2c3a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3e6ab1;
+            border-radius: 3px;
         }
         /* Кастомный чекбокс */
         .custom-checkbox {
@@ -104,10 +111,11 @@
             border-width: 0 2px 2px 0;
             transform: rotate(45deg);
         }
-        /* Фиксируем высоту контента без скролла */
+        /* Фиксируем контент */
         .tab-content-container {
-            height: calc(100vh - 96px); /* Высота вьюпорта минус высота шапки и табов */
-            overflow: hidden;
+            height: calc(100vh - 96px);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
     </style>
 </head>
