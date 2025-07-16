@@ -22,5 +22,13 @@
     "Price": 67.0,
     "Article": 100005,
     "Image": "images/100005.png"
+  },
+  {
+    "Id": 7,
+    "Name": "буб",
+    "Description": "попа енота",
+    "Price": 10.0,
+    "Article": 100006,
+    "Image": "images/100006.png"
   }
 ]
