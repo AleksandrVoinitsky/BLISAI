@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 4,
+    "Name": "деревянный брус",
+    "Description": "старое дерево",
+    "Price": 32.78,
+    "Article": 100003,
+    "Image": "images/100003.png"
+  },
+  {
+    "Id": 5,
+    "Name": "кока кола",
+    "Description": "газированная вода",
+    "Price": 76.8,
+    "Article": 100004,
+    "Image": "images/100004.png"
+  },
+  {
+    "Id": 6,
+    "Name": "Молоко байкальское топленое",
+    "Description": "просто молоко",
+    "Price": 67.0,
+    "Article": 100005,
+    "Image": "images/100005.png"
+  }
+]
