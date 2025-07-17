@@ -5,7 +5,7 @@
     "description": "0.9л полипак",
     "price": 85.0,
     "article": 100000,
-    "image": "100000.webp"
+    "image": "images/100000.webp"
   },
   {
     "id": 13,
@@ -13,7 +13,7 @@
     "description": "1л тетрапак",
     "price": 83.0,
     "article": 100001,
-    "image": "100001.webp"
+    "image": "images/100001.webp"
   },
   {
     "id": 14,
@@ -21,7 +21,7 @@
     "description": "1 л тетрапак",
     "price": 86.0,
     "article": 100002,
-    "image": "100002.webp"
+    "image": "images/100002.webp"
   },
   {
     "id": 15,
@@ -29,7 +29,7 @@
     "description": "1л тетрапак",
     "price": 88.0,
     "article": 100003,
-    "image": "100003.webp"
+    "image": "images/100003.webp"
   },
   {
     "id": 16,
@@ -37,7 +37,7 @@
     "description": "20%  180г",
     "price": 78.43,
     "article": 100004,
-    "image": "100004.webp"
+    "image": "images/100004.webp"
   },
   {
     "id": 17,
@@ -45,7 +45,7 @@
     "description": "20% 380г",
     "price": 126.2,
     "article": 100005,
-    "image": "100005.webp"
+    "image": "images/100005.webp"
   },
   {
     "id": 18,
@@ -53,7 +53,7 @@
     "description": "400г",
     "price": 210.1,
     "article": 100006,
-    "image": "100006.webp"
+    "image": "images/100006.webp"
   },
   {
     "id": 19,
@@ -61,7 +61,7 @@
     "description": "200г",
     "price": 106.7,
     "article": 100007,
-    "image": "100007.webp"
+    "image": "images/100007.webp"
   },
   {
     "id": 20,
@@ -69,7 +69,7 @@
     "description": "0.9 полипак",
     "price": 70.0,
     "article": 100008,
-    "image": "100008.webp"
+    "image": "images/100008.webp"
   },
   {
     "id": 21,
@@ -77,7 +77,7 @@
     "description": "0.9л полипак",
     "price": 63.8,
     "article": 100009,
-    "image": "100009.webp"
+    "image": "images/100009.webp"
   },
   {
     "id": 22,
@@ -85,7 +85,7 @@
     "description": "500гр тетрапак",
     "price": 69.5,
     "article": 100010,
-    "image": "100010.webp"
+    "image": "images/100010.webp"
   },
   {
     "id": 23,
@@ -93,7 +93,7 @@
     "description": "0.93л бутылка",
     "price": 98.0,
     "article": 100011,
-    "image": "100011.webp"
+    "image": "images/100011.webp"
   },
   {
     "id": 24,
@@ -101,6 +101,6 @@
     "description": "500г тетрапак",
     "price": 83.2,
     "article": 100012,
-    "image": "100012.webp"
+    "image": "images/100012.webp"
   }
 ]
