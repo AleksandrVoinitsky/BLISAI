@@ -30,5 +30,21 @@
     "price": 88.0,
     "article": 100003,
     "image": "images/100003.webp"
+  },
+  {
+    "id": 16,
+    "name": "Сметана Любимая чашка",
+    "description": "20%  180г",
+    "price": 78.43,
+    "article": 100004,
+    "image": "images/100004.webp"
+  },
+  {
+    "id": 17,
+    "name": "Сметана  Любимая  чашка",
+    "description": "20% 380г",
+    "price": 126.2,
+    "article": 100005,
+    "image": "images/100005.webp"
   }
 ]
