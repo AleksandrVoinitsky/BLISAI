@@ -256,5 +256,181 @@
     "description": "340г ключ крышка",
     "price": 170.0,
     "article": 100032
+  },
+  {
+    "id": 49,
+    "name": "Сыр MOZZARELLA ЯНТА",
+    "description": "150г",
+    "price": 1.0,
+    "article": 100033,
+    "image": "100033.webp"
+  },
+  {
+    "id": 50,
+    "name": "Йогурт Греческий 10%",
+    "description": "ЯНТА 190г",
+    "price": 70.0,
+    "article": 100034,
+    "image": "100034.webp"
+  },
+  {
+    "id": 51,
+    "name": "Сырок Капитан Милк",
+    "description": "с пломбиром 40гр",
+    "price": 50.0,
+    "article": 100035,
+    "image": "100035.webp"
+  },
+  {
+    "id": 52,
+    "name": "Сырок Капитан Милк",
+    "description": "с кокосом 40г",
+    "price": 50.0,
+    "article": 100036,
+    "image": "100036.webp"
+  },
+  {
+    "id": 53,
+    "name": "Сырок Капитан Милк",
+    "description": "40гр  с карамелью",
+    "price": 50.0,
+    "article": 100037,
+    "image": "100037.webp"
+  },
+  {
+    "id": 54,
+    "name": "Сырок Капитан Милк",
+    "description": "с шоколадом 40г",
+    "price": 50.0,
+    "article": 100038,
+    "image": "100038.webp"
+  },
+  {
+    "id": 55,
+    "name": "Сырок Капитан Милк",
+    "description": "40гр  с клубникой",
+    "price": 50.0,
+    "article": 100039,
+    "image": "100039.webp"
+  },
+  {
+    "id": 56,
+    "name": "Сырок Капитан Милк",
+    "description": "40гр  с ванилином",
+    "price": 50.0,
+    "article": 100040,
+    "image": "100040.webp"
+  },
+  {
+    "id": 57,
+    "name": "Сырок Байкальский с изюмом",
+    "description": "100г",
+    "price": 50.0,
+    "article": 100041,
+    "image": "100041.webp"
+  },
+  {
+    "id": 58,
+    "name": "Сырок Байкальский с ванилином",
+    "description": "100гр",
+    "price": 50.0,
+    "article": 100042,
+    "image": "100042.webp"
+  },
+  {
+    "id": 59,
+    "name": "Десерт творожный Байкальский",
+    "description": "карамель 150г",
+    "price": 50.0,
+    "article": 100043,
+    "image": "100043.webp"
+  },
+  {
+    "id": 60,
+    "name": "Десерт творожный Байкальский",
+    "description": "150г пломбир",
+    "price": 50.0,
+    "article": 100044,
+    "image": "100044.webp"
+  },
+  {
+    "id": 61,
+    "name": "Десерт творожный Байкальский",
+    "description": "150г шоколадный",
+    "price": 50.0,
+    "article": 100045,
+    "image": "100045.webp"
+  },
+  {
+    "id": 62,
+    "name": "Десерт творожный Байкальский",
+    "description": "150г ваниль",
+    "price": 70.0,
+    "article": 100046,
+    "image": "100046.webp"
+  },
+  {
+    "id": 63,
+    "name": "Десерт творожный Байкальский",
+    "description": "150г Черешня",
+    "price": 70.0,
+    "article": 100047,
+    "image": "100047.webp"
+  },
+  {
+    "id": 64,
+    "name": "Молочный десерт Байкальский 6%",
+    "description": "200г",
+    "price": 70.0,
+    "article": 100048,
+    "image": "100048.webp"
+  },
+  {
+    "id": 65,
+    "name": "Биойогурт  термостатный ЯНТА",
+    "description": "2.5% 200г",
+    "price": 70.0,
+    "article": 100049,
+    "image": "100049.webp"
+  },
+  {
+    "id": 66,
+    "name": "АЦИДОФИЛИН термостатный ЯНТА",
+    "description": "2.5 % 200г",
+    "price": 70.0,
+    "article": 100050,
+    "image": "100050.webp"
+  },
+  {
+    "id": 67,
+    "name": "MOZZARELLA ЯНТА",
+    "description": "250Г",
+    "price": 50.0,
+    "article": 100051,
+    "image": "100051.webp"
+  },
+  {
+    "id": 68,
+    "name": "Сыр плавленый ЯНТА Сливочный",
+    "description": "180г 40%",
+    "price": 100.0,
+    "article": 100052,
+    "image": "100052.webp"
+  },
+  {
+    "id": 69,
+    "name": "Сыр мягкий Кавказский ЯНТА",
+    "description": "45%",
+    "price": 100.0,
+    "article": 100053,
+    "image": "100053.webp"
+  },
+  {
+    "id": 70,
+    "name": "Сыр БРЫНЗА ЯНТА",
+    "description": "400г",
+    "price": 100.0,
+    "article": 100054,
+    "image": "100054.webp"
   }
 ]
