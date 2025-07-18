@@ -432,5 +432,109 @@
     "price": 100.0,
     "article": 100054,
     "image": "100054.webp"
+  },
+  {
+    "id": 71,
+    "name": "Сыр СУЛУГУНИ ЯНТА",
+    "description": "45%",
+    "price": 100.0,
+    "article": 100055,
+    "image": "100055.webp"
+  },
+  {
+    "id": 72,
+    "name": "Сметана Байкальская 30%",
+    "description": "400г",
+    "price": 300.0,
+    "article": 100056,
+    "image": "100056.webp"
+  },
+  {
+    "id": 73,
+    "name": "Масло топлёное  Байкальское",
+    "description": "200г 99%",
+    "price": 100.0,
+    "article": 100057,
+    "image": "100057.webp"
+  },
+  {
+    "id": 74,
+    "name": "Масло  традиционное сливочное ЯНТА",
+    "description": "82.5% 200гр",
+    "price": 300.0,
+    "article": 100058,
+    "image": "100058.webp"
+  },
+  {
+    "id": 75,
+    "name": "Молоко Любимая чашка 1.5%",
+    "description": "1 л  тетрапак",
+    "price": 80.0,
+    "article": 100059,
+    "image": "100059.webp"
+  },
+  {
+    "id": 76,
+    "name": "Молоко топлёное ЯНТА",
+    "description": "1л 4%",
+    "price": 120.0,
+    "article": 100060,
+    "image": "100060.webp"
+  },
+  {
+    "id": 77,
+    "name": "Молоко Байкальское 3.5л%",
+    "description": "1л тетрапак",
+    "price": 120.0,
+    "article": 100061,
+    "image": "100061.webp"
+  },
+  {
+    "id": 78,
+    "name": "Молоко Байкальское ЯНТА",
+    "description": "6% тетрапак",
+    "price": 180.0,
+    "article": 100062,
+    "image": "100062.webp"
+  },
+  {
+    "id": 79,
+    "name": "Молоко Байкальское 3.2%",
+    "description": "1 л тетрапак",
+    "price": 150.0,
+    "article": 100063,
+    "image": "100063.webp"
+  },
+  {
+    "id": 80,
+    "name": "Молоко Байкальское 2.5л",
+    "description": "1л тетрапак",
+    "price": 120.0,
+    "article": 100064,
+    "image": "100064.webp"
+  },
+  {
+    "id": 81,
+    "name": "Сметана Любимая чашка",
+    "description": "10% 380г",
+    "price": 1.0,
+    "article": 100065,
+    "image": "100065.webp"
+  },
+  {
+    "id": 82,
+    "name": "Сметана Любимая чашка",
+    "description": "10% 180г",
+    "price": 1.0,
+    "article": 100066,
+    "image": "100066.webp"
+  },
+  {
+    "id": 83,
+    "name": "Пахта ЯНТА",
+    "description": "1л полипак",
+    "price": 1.0,
+    "article": 100067,
+    "image": "100067.webp"
   }
 ]
