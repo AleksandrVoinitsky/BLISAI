@@ -752,5 +752,13 @@
     "price": 61.25,
     "article": 100094,
     "image": "100094.webp"
+  },
+  {
+    "id": 111,
+    "name": "Спред Луговой 250г ЯНТА",
+    "description": "#",
+    "price": 41.0,
+    "article": 100095,
+    "image": "100095.webp"
   }
 ]
