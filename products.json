@@ -156,7 +156,8 @@
     "name": "Снежок 2.5%",
     "description": "500г тетра топ",
     "price": 65.9,
-    "article": 100019
+    "article": 100019,
+    "image": "100019.webp"
   },
   {
     "id": 36,
@@ -234,14 +235,16 @@
     "name": "Сгущёнка молоко Байкальское 8.5%",
     "description": "380г ключ крышка",
     "price": 120.0,
-    "article": 100029
+    "article": 100029,
+    "image": "100029.webp"
   },
   {
     "id": 46,
     "name": "Сгущёное Молоко Варёное Байкальское 8.5%",
     "description": "340г ключ крышка",
     "price": 130.0,
-    "article": 100030
+    "article": 100030,
+    "image": "100030.webp"
   },
   {
     "id": 47,
@@ -255,7 +258,8 @@
     "name": "Сгущёные сливки с сахаром ЯНТА",
     "description": "340г ключ крышка",
     "price": 170.0,
-    "article": 100032
+    "article": 100032,
+    "image": "100032.webp"
   },
   {
     "id": 49,
@@ -768,5 +772,301 @@
     "price": 78.0,
     "article": 100096,
     "image": "100096.webp"
+  },
+  {
+    "id": 113,
+    "name": "Соус ЧИЛИ ЯНТА",
+    "description": "200г",
+    "price": 43.5,
+    "article": 100097,
+    "image": "100097.webp"
+  },
+  {
+    "id": 114,
+    "name": "Дрожжи ЛЮКС",
+    "description": "100г",
+    "price": 21.6,
+    "article": 100098,
+    "image": "100098.webp"
+  },
+  {
+    "id": 115,
+    "name": "Сыр ФЕТА",
+    "description": "200г",
+    "price": 143.0,
+    "article": 100099,
+    "image": "100099.webp"
+  },
+  {
+    "id": 116,
+    "name": "Плавленый продукт с сыром 70г",
+    "description": "Плавыч",
+    "price": 15.0,
+    "article": 100100,
+    "image": "100100.webp"
+  },
+  {
+    "id": 117,
+    "name": "Сыр  Гауда",
+    "description": "УГЛИЧ",
+    "price": 901.0,
+    "article": 100101,
+    "image": "100101.webp"
+  },
+  {
+    "id": 118,
+    "name": "Масло сливочное  крестьянской весовое 1 кг",
+    "description": "#",
+    "price": 625.0,
+    "article": 100102,
+    "image": "100102.webp"
+  },
+  {
+    "id": 119,
+    "name": "Колбасный продукт копченый Плавыч",
+    "description": "1/ 13.5 кг",
+    "price": 176.5,
+    "article": 100103,
+    "image": "100103.webp"
+  },
+  {
+    "id": 120,
+    "name": "Сок МАЛЫШАМ 200г",
+    "description": "1/18",
+    "price": 29.0,
+    "article": 100104,
+    "image": "100104.webp"
+  },
+  {
+    "id": 121,
+    "name": "Президент сыр плавленый тост 150г",
+    "description": "#",
+    "price": 113.0,
+    "article": 100105,
+    "image": "100105.webp"
+  },
+  {
+    "id": 122,
+    "name": "Сыр Королевская печать",
+    "description": "45%",
+    "price": 731.0,
+    "article": 100106,
+    "image": "100106.webp"
+  },
+  {
+    "id": 123,
+    "name": "Сыр КОСА копченая 100г",
+    "description": "Радужный",
+    "price": 128.0,
+    "article": 100107,
+    "image": "100107.webp"
+  },
+  {
+    "id": 124,
+    "name": "Сыр  СЛИВОЧНЫЙ Киприно",
+    "description": "#",
+    "price": 816.0,
+    "article": 100108,
+    "image": "100108.webp"
+  },
+  {
+    "id": 125,
+    "name": "Сыр плавленый ПЛАВЫЧ 180.00",
+    "description": "в ассортименте",
+    "price": 105.0,
+    "article": 100109,
+    "image": "100109.webp"
+  },
+  {
+    "id": 126,
+    "name": "Сыр Леаус 300г",
+    "description": "#",
+    "price": 975.0,
+    "article": 100110,
+    "image": "100110.webp"
+  },
+  {
+    "id": 127,
+    "name": "Сыр Покровский  300г",
+    "description": "#",
+    "price": 975.0,
+    "article": 100111,
+    "image": "100111.webp"
+  },
+  {
+    "id": 128,
+    "name": "Сыр Чёрный принц",
+    "description": "кг",
+    "price": 927.0,
+    "article": 100112,
+    "image": "100112.webp"
+  },
+  {
+    "id": 129,
+    "name": "Сыр Чуйский творожный 140г",
+    "description": "шт",
+    "price": 118.0,
+    "article": 100113,
+    "image": "100113.webp"
+  },
+  {
+    "id": 130,
+    "name": "Колбасный Брест Литовский  копчёный  300г",
+    "description": "шт",
+    "price": 175.0,
+    "article": 100114,
+    "image": "100114.webp"
+  },
+  {
+    "id": 131,
+    "name": "Масло Минская марка 180г",
+    "description": "Беларусь",
+    "price": 231.0,
+    "article": 100115,
+    "image": "100115.webp"
+  },
+  {
+    "id": 132,
+    "name": "Масло Сохраняя традиции 180г",
+    "description": "Беларусь",
+    "price": 205.0,
+    "article": 100116,
+    "image": "100116.webp"
+  },
+  {
+    "id": 133,
+    "name": "Сливки 10% 500г",
+    "description": "Сливки БМК  10% 500г",
+    "price": 125.0,
+    "article": 100117,
+    "image": "100117.webp"
+  },
+  {
+    "id": 134,
+    "name": "Сливки  БМК 20% 500г",
+    "description": "#",
+    "price": 195.0,
+    "article": 100118,
+    "image": "100118.webp"
+  },
+  {
+    "id": 135,
+    "name": "Сливки БМК 33% 500г",
+    "description": "#",
+    "price": 305.0,
+    "article": 100119,
+    "image": "100119.webp"
+  },
+  {
+    "id": 136,
+    "name": "Йогурт Фругурт 1.5% 950г",
+    "description": "#",
+    "price": 143.6,
+    "article": 100120,
+    "image": "100120.webp"
+  },
+  {
+    "id": 137,
+    "name": "сок ФрутоНЯНЯ 200г",
+    "description": "1/18",
+    "price": 39.0,
+    "article": 100121,
+    "image": "100121.webp"
+  },
+  {
+    "id": 138,
+    "name": "Хохланд  БРЫНЗА 250г",
+    "description": "#",
+    "price": 227.0,
+    "article": 100122,
+    "image": "100122.webp"
+  },
+  {
+    "id": 139,
+    "name": "Молоко Минская марка 3.2% 1л",
+    "description": "#",
+    "price": 109.0,
+    "article": 100123,
+    "image": "100123.webp"
+  },
+  {
+    "id": 140,
+    "name": "Молоко Село Зелёное 3.2% 0.95л",
+    "description": "#",
+    "price": 106.0,
+    "article": 100124,
+    "image": "100124.webp"
+  },
+  {
+    "id": 141,
+    "name": "Колбасный сыр МИНЧАНКА",
+    "description": "ГОСТ Беларусь",
+    "price": 562.0,
+    "article": 100125,
+    "image": "100125.webp"
+  },
+  {
+    "id": 142,
+    "name": "Сливки ТРИ КОРОВЫ ДВА КОТА 200г 20%",
+    "description": "#",
+    "price": 93.0,
+    "article": 100126,
+    "image": "100126.webp"
+  },
+  {
+    "id": 143,
+    "name": "Сливки ТРИ КОРОВЫ ДВА КОТА 500г 10%",
+    "description": "#",
+    "price": 158.0,
+    "article": 100127,
+    "image": "100127.webp"
+  },
+  {
+    "id": 144,
+    "name": "Сливки ТРИ КОРОВЫ ДВА КОТА 200г 10%",
+    "description": "#",
+    "price": 66.0,
+    "article": 100128,
+    "image": "100128.webp"
+  },
+  {
+    "id": 145,
+    "name": "Йогурт питьевой 1.2% 290г",
+    "description": "1/6",
+    "price": 68.0,
+    "article": 100129,
+    "image": "100129.webp"
+  },
+  {
+    "id": 146,
+    "name": "Коктейль Молочный ТРИ КОРОВЫ ДВА КОТА  200г",
+    "description": "#",
+    "price": 41.0,
+    "article": 100130,
+    "image": "100130.webp"
+  },
+  {
+    "id": 147,
+    "name": "Растишка  творог 1*6 3.5%",
+    "description": "#",
+    "price": 112.0,
+    "article": 100131,
+    "image": "100131.webp"
+  },
+  {
+    "id": 148,
+    "name": "Растишка питьевой 90г 1*4",
+    "description": "#",
+    "price": 37.4,
+    "article": 100132,
+    "image": "100132.webp"
+  },
+  {
+    "id": 149,
+    "name": "Растишка коктейль 210г",
+    "description": "#",
+    "price": 65.0,
+    "article": 100133,
+    "image": "100133.webp"
   }
 ]
