@@ -594,7 +594,7 @@
   {
     "id": 90,
     "name": "Майонез Провансаль 100г ЯНТА",
-    "description": "полипак",
+    "description": "1/64",
     "price": 22.5,
     "article": 100074,
     "image": "100074.webp"
@@ -602,7 +602,7 @@
   {
     "id": 91,
     "name": "Майонез Провансаль 200г ЯНТА",
-    "description": "дой.пак",
+    "description": "1/32",
     "price": 60.6,
     "article": 100075,
     "image": "100075.webp"
@@ -610,7 +610,7 @@
   {
     "id": 92,
     "name": "Майонез Провансаль ЯНТА 400г",
-    "description": "дой.пак",
+    "description": "1/16",
     "price": 94.0,
     "article": 100076,
     "image": "100076.webp"
@@ -618,7 +618,7 @@
   {
     "id": 93,
     "name": "Майонез Провансаль 800г ЯНТА",
-    "description": "дой.пак",
+    "description": "1/8",
     "price": 205.8,
     "article": 100077,
     "image": "100077.webp"
@@ -626,7 +626,7 @@
   {
     "id": 94,
     "name": "Майонез Провансаль 900г ЯНТА",
-    "description": "Бидон",
+    "description": "1/6",
     "price": 216.0,
     "article": 100078,
     "image": "100078.webp"
@@ -642,7 +642,7 @@
   {
     "id": 96,
     "name": "Майонез Салатный 400г ЯНТА",
-    "description": "дой.пак",
+    "description": "1/16",
     "price": 90.6,
     "article": 100080,
     "image": "100080.webp"
@@ -650,7 +650,7 @@
   {
     "id": 97,
     "name": "Майонез Салатный 800г ЯНТА",
-    "description": "дой.пак",
+    "description": "1/8",
     "price": 174.0,
     "article": 100081,
     "image": "100081.webp"
@@ -666,7 +666,7 @@
   {
     "id": 99,
     "name": "Майонез Провансаль 10кг ЯНТА",
-    "description": "бидон 67%",
+    "description": "1шт",
     "price": 1404.0,
     "article": 100083,
     "image": "100083.webp"
@@ -674,7 +674,7 @@
   {
     "id": 100,
     "name": "Маргарин  Домашний  250г ЯНТА",
-    "description": "фольга",
+    "description": "1/40",
     "price": 46.2,
     "article": 100084,
     "image": "100084.webp"
