@@ -2,7 +2,7 @@
   {
     "id": 12,
     "name": "Молоко Любимая чашка 3.2% 0.9л полипак",
-    "description": "0.9л полипак",
+    "description": "шт",
     "price": 85.0,
     "article": 100000,
     "image": "100000.webp"
@@ -10,7 +10,7 @@
   {
     "id": 13,
     "name": "Молоко Любимая чашка 2.5% 1л тетрапак",
-    "description": "1л тетрапак",
+    "description": "1/12",
     "price": 83.0,
     "article": 100001,
     "image": "100001.webp"
@@ -18,7 +18,7 @@
   {
     "id": 14,
     "name": "Молоко Любимая чашка 3.2% 1л тетрапак",
-    "description": "1 л тетрапак",
+    "description": "1/12",
     "price": 86.0,
     "article": 100002,
     "image": "100002.webp"
@@ -26,7 +26,7 @@
   {
     "id": 15,
     "name": "Молоко Любимая чашка 3.5% 1л тетрапак",
-    "description": "1л тетрапак",
+    "description": "2/12",
     "price": 88.0,
     "article": 100003,
     "image": "100003.webp"
@@ -474,15 +474,15 @@
   {
     "id": 75,
     "name": "Молоко Любимая чашка 1.5% 1л тетрапак",
-    "description": "1 л  тетрапак",
+    "description": "1/12",
     "price": 80.0,
     "article": 100059,
     "image": "100059.webp"
   },
   {
     "id": 76,
-    "name": "Молоко топлёное ЯНТА",
-    "description": "1л 4%",
+    "name": "Молоко Байкальское ТОПЛЁНОЕ 4%  ЯНТА",
+    "description": "1/12",
     "price": 120.0,
     "article": 100060,
     "image": "100060.webp"
@@ -490,15 +490,15 @@
   {
     "id": 77,
     "name": "Молоко Байкальское 3.5л%",
-    "description": "1л тетрапак",
+    "description": "1/12",
     "price": 120.0,
     "article": 100061,
     "image": "100061.webp"
   },
   {
     "id": 78,
-    "name": "Молоко Байкальское ЯНТА",
-    "description": "6% тетрапак",
+    "name": "Молоко Байкальское 6%",
+    "description": "1/12",
     "price": 180.0,
     "article": 100062,
     "image": "100062.webp"
@@ -506,7 +506,7 @@
   {
     "id": 79,
     "name": "Молоко Байкальское 3.2%",
-    "description": "1 л тетрапак",
+    "description": "1/12",
     "price": 150.0,
     "article": 100063,
     "image": "100063.webp"
@@ -514,7 +514,7 @@
   {
     "id": 80,
     "name": "Молоко Байкальское 2.5л",
-    "description": "1л тетрапак",
+    "description": "1/12",
     "price": 120.0,
     "article": 100064,
     "image": "100064.webp"
@@ -986,7 +986,7 @@
   {
     "id": 139,
     "name": "Молоко Минская марка 3.2% 1л",
-    "description": "#",
+    "description": "1/12",
     "price": 109.0,
     "article": 100123,
     "image": "100123.webp"
@@ -994,7 +994,7 @@
   {
     "id": 140,
     "name": "Молоко Село Зелёное 3.2% 0.95л",
-    "description": "#",
+    "description": "1/12",
     "price": 106.0,
     "article": 100124,
     "image": "100124.webp"
