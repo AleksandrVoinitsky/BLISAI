@@ -395,7 +395,7 @@
     "id": 65,
     "name": "Биойогурт  термостатный ЯНТА",
     "description": "2.5% 200г",
-    "price": 70.0,
+    "price": 38.0,
     "article": 100049,
     "image": "100049.webp"
   },
@@ -411,7 +411,7 @@
     "id": 67,
     "name": "Сыр MOZZARELLA  ЯНТА  250г круг",
     "description": "250Г",
-    "price": 206.0,
+    "price": 175.23,
     "article": 100051,
     "image": "100051.webp"
   },
@@ -419,7 +419,7 @@
     "id": 68,
     "name": "Сыр плавленый ЯНТА Сливочный",
     "description": "180г 40%",
-    "price": 100.0,
+    "price": 118.2,
     "article": 100052,
     "image": "100052.webp"
   },
@@ -435,7 +435,7 @@
     "id": 70,
     "name": "Сыр БРЫНЗА ЯНТА",
     "description": "400г",
-    "price": 100.0,
+    "price": 180.58,
     "article": 100054,
     "image": "100054.webp"
   },
