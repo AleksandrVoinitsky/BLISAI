@@ -267,7 +267,7 @@
     "id": 49,
     "name": "Сыр MOZZARELLA ЯНТА",
     "description": "150г",
-    "price": 206.0,
+    "price": 175.0,
     "article": 100033,
     "image": "100033.webp"
   },
@@ -283,7 +283,7 @@
     "id": 51,
     "name": "Сырок Любимая чашка  кокос",
     "description": "1/10",
-    "price": 35.75,
+    "price": 34.5,
     "article": 100035,
     "image": "100035.webp"
   },
@@ -291,7 +291,7 @@
     "id": 52,
     "name": "Сырок Любимая чашка  карамель",
     "description": "1/10",
-    "price": 35.76,
+    "price": 34.5,
     "article": 100036,
     "image": "100036.webp"
   },
@@ -299,7 +299,7 @@
     "id": 53,
     "name": "Сырок Любимая Чашка  Ваниль",
     "description": "1/10",
-    "price": 35.76,
+    "price": 34.5,
     "article": 100037,
     "image": "100037.webp"
   },
@@ -307,7 +307,7 @@
     "id": 54,
     "name": "Сырок Любимая чашка  Клубника",
     "description": "1/10",
-    "price": 35.76,
+    "price": 34.5,
     "article": 100038,
     "image": "100038.webp"
   },
@@ -315,7 +315,7 @@
     "id": 55,
     "name": "Сырок Любимая чашка  пломбир",
     "description": "1/10",
-    "price": 35.76,
+    "price": 34.5,
     "article": 100039,
     "image": "100039.webp"
   },
@@ -323,7 +323,7 @@
     "id": 56,
     "name": "Сырок Любимая чашка Варёная сгущёнка",
     "description": "1/10",
-    "price": 35.76,
+    "price": 34.5,
     "article": 100040,
     "image": "100040.webp"
   },
@@ -443,7 +443,7 @@
     "id": 71,
     "name": "Сыр СУЛУГУНИ ЯНТА",
     "description": "45%",
-    "price": 258.5,
+    "price": 245.0,
     "article": 100055,
     "image": "100055.webp"
   },
