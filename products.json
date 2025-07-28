@@ -1933,5 +1933,21 @@
     "description": "1кг",
     "price": 170.0,
     "article": 100241
+  },
+  {
+    "id": 258,
+    "name": "Томатная паста 280г 25% ст.б",
+    "description": "1/12",
+    "price": 103.7,
+    "article": 100242,
+    "image": "100242.webp"
+  },
+  {
+    "id": 259,
+    "name": "Горчица 280г ст.банка ЯНТА",
+    "description": "1/12",
+    "price": 56.5,
+    "article": 100243,
+    "image": "100243.webp"
   }
 ]
