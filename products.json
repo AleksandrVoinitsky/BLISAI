@@ -937,9 +937,9 @@
   },
   {
     "id": 133,
-    "name": "Сливки БМК 10% 500г",
+    "name": "Сливки 10% БМК 500г",
     "description": "1/12",
-    "price": 128.5,
+    "price": 125.0,
     "article": 100117,
     "image": "100117.webp"
   },
@@ -947,7 +947,7 @@
     "id": 134,
     "name": "Сливки  БМК 20% 500г",
     "description": "#",
-    "price": 240.0,
+    "price": 225.0,
     "article": 100118,
     "image": "100118.webp"
   },
@@ -955,7 +955,7 @@
     "id": 135,
     "name": "Сливки БМК 33% 500г",
     "description": "#",
-    "price": 340.0,
+    "price": 334.0,
     "article": 100119,
     "image": "100119.webp"
   },
@@ -1259,7 +1259,7 @@
     "id": 173,
     "name": "Творог 5% Простоквашено 200г",
     "description": "1/6",
-    "price": 117.0,
+    "price": 121.0,
     "article": 100157,
     "image": "100157.webp"
   },
@@ -2166,5 +2166,45 @@
     "price": 98.0,
     "article": 100270,
     "image": "100270.webp"
+  },
+  {
+    "id": 287,
+    "name": "Молоко 3.2% БМК",
+    "description": "1/12",
+    "price": 116.5,
+    "article": 100271,
+    "image": "100271.webp"
+  },
+  {
+    "id": 288,
+    "name": "Сливки Чудское озеро 10%  200г",
+    "description": "шт",
+    "price": 68.6,
+    "article": 100272,
+    "image": "100272.webp"
+  },
+  {
+    "id": 289,
+    "name": "Сливки Чудское озеро  20% 200г",
+    "description": "шт",
+    "price": 106.0,
+    "article": 100273,
+    "image": "100273.webp"
+  },
+  {
+    "id": 290,
+    "name": "Сливки Чудское озеро 33% 200г",
+    "description": "шт",
+    "price": 158.0,
+    "article": 100274,
+    "image": "100274.webp"
+  },
+  {
+    "id": 291,
+    "name": "Молоко БМК 1 л.  2.5%",
+    "description": "1/12",
+    "price": 110.0,
+    "article": 100275,
+    "image": "100275.webp"
   }
 ]
