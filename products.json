@@ -490,8 +490,8 @@
   {
     "id": 77,
     "name": "Молоко Байкальское 3.5л%",
-    "description": "1/12",
-    "price": 157.85,
+    "description": "АКЦИЯ",
+    "price": 115.0,
     "article": 100061,
     "image": "100061.webp"
   },
@@ -506,8 +506,8 @@
   {
     "id": 79,
     "name": "Молоко Байкальское 3.2%",
-    "description": "1/12",
-    "price": 151.8,
+    "description": "АКЦИЯ",
+    "price": 110.0,
     "article": 100063,
     "image": "100063.webp"
   },
@@ -2270,5 +2270,21 @@
     "price": 83.0,
     "article": 100283,
     "image": "100283.webp"
+  },
+  {
+    "id": 300,
+    "name": "Масло сливочное БАБУШКИНА КРЫНКА 180г 82.5%",
+    "description": "шт",
+    "price": 194.0,
+    "article": 100284,
+    "image": "100284.webp"
+  },
+  {
+    "id": 301,
+    "name": "Сыр ЛАМБЕР",
+    "description": "кг",
+    "price": 110.0,
+    "article": 100285,
+    "image": "100285.webp"
   }
 ]
